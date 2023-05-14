@@ -34,7 +34,8 @@ st.title("Dengue Cases Predictor")
 st.write("This app predicts the next Dengue Cases in Sri Lanka")
 
 # load the temperature data
-data = pd.read_csv('Dengue_Data (2010-2020).csv', parse_dates='Date', index_col = True)
+data = pd.read_csv('Dengue_Data (2010-2020).csv', parse_dates='Date')
+data.set_index('Date', inplace = True)
 
 # display the current dengue cases data
 st.subheader("Current Dengue Cases in Sri Lanka")
