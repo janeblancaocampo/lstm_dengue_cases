@@ -51,7 +51,7 @@ latest_date = data.index[-1]
 predicted_temps = []
 for i in range(5):
     next_date = latest_date + pd.Timedelta(days=1)
-    pred_case = pred_case(np.array(data['Date']))
+    pred_case = pred_case(np.array(data['Value']))
     pred_case.append(pred_case)
     latest_date = next_date
     data.loc[next_date] = pred_case
