@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 model = load_model('lstm_model.h5')
 
 # function to make predictions using the loaded model
-def predict_case(data):
+def pred_case(data):
     # slice the data to only include the last months
     data = data[-60:]
     # reshape the input data to match the expected input shape of the model
